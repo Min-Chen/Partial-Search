@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -42,5 +43,17 @@ public class OneQuery {
         else {
             result.add(new OneResultLine(fileName, index));
         }
+    }
+
+    public String toString() {
+        String str = query;
+        if (result.size() == 0) return str;
+        else {
+            Collections.sort(result, new QueryResultComparator());
+            for (OneResultLine l: result) {
+                str += "\n" + l.toString();
+            }
+        }
+        return str;
     }
 }

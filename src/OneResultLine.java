@@ -23,4 +23,16 @@ public class OneResultLine {
     public String toString() {
         return "\"" + fileName + "\", " + frequency + ", " + firstIndex;
     }
+
+    public int getFrequency() {
+        return frequency;
+    }
+
+    public int getFirstIndex() {
+        return firstIndex;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
 }
