@@ -111,7 +111,7 @@ public class Driver {
             FileReader fr = new FileReader (path);
             BufferedReader br = new BufferedReader(fr);
 
-            currentFileName = path;
+            currentFileName = new File(path).getAbsolutePath();
             currentWordIndex = 1;
 
             String str;
